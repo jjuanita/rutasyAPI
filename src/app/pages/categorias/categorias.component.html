@@ -1,0 +1,14 @@
+<h3>Categorías</h3>
+
+<div class="row">
+    @for (categories of data; track categories.id) {
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img [src]="categories.image || 'https://via.placeholder.com/300'" class="card-img-top" alt="{{ categories.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ categories.name }}</h5>
+            </div>
+        </div>
+      </div>
+    }
+  </div>

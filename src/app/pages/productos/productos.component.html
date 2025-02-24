@@ -1,0 +1,16 @@
+<h3>Productos</h3>
+
+<div class="row">
+  @for (product of data; track product.id) {
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img [src]="product.images[0] || 'https://via.placeholder.com/300'" class="card-img-top" alt="{{ product.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.title }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text"><strong>Precio:</strong> ${{ product.price }}</p>
+        </div>
+      </div>
+    </div>
+  }
+</div>
